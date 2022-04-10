@@ -14,7 +14,7 @@ This section documents some concepts or methods that can be easily misunderstood
 
     This is legal because the first line only *declares* `x`, not *initializes* it. The second line then initializes it. After that, the value of `x` cannot be changed – that would be illegal and cause the compiler to flag an error.
 
-* Integer math vs. floating-point (double) math: 
+* Integer math vs. floating-point (double) math:
   * Performing a mathematical operation on two integers will always result in an **integer**. If the result is not an integer, it is truncated to make it one. (*Truncation* simply means that the decimal portion of the result is removed, i.e. the number is rounded down).
     * For example, `5 / 3` is equal to `1`, since 1.67 is truncated.
   * Performing a mathematical operation that involves any double value will always result in a **double**. This means that even if the result is an integer, like in the case of `5 + 3`, which is 8, Java will report the result as `8.0`.
@@ -39,6 +39,8 @@ This section documents some concepts or methods that can be easily misunderstood
 
 * Constructors have no return type, so their signature just consists of the name of the class and the parameter list. However, methods **do** have a return type, so in addition to the method name and parameter list, the signature also includes the return type.
 
+## Unit 3: Boolean Expressions and `if` Statements
+
 ## Unit 4: Iteration
 
 * `while` and `for` loops do **not** have to execute at all! If the Boolean expression evaluates to `false` the first time it is evaluated, the loop will not execute at all.
@@ -62,3 +64,13 @@ This section documents some concepts or methods that can be easily misunderstood
 * A default no-argument constructor is **only** provided when no constructors are written. **If you write a constructor with parameters, Java will not automatically provide a no-argument constructor.**
 
 * When a method returns an object reference, the **reference** is copied, **not** the object. This means that
+
+## Unit 6: Array
+
+## Unit 7: `ArrayList`
+
+## Unit 8: 2D Array
+
+## Unit 9: Inheritance
+
+## Unit 10: Recursion

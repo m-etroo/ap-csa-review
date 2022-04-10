@@ -226,7 +226,7 @@ This is essentially a full, unit-by-unit guide of all the topics covered on the 
 
 * Flow of control for these loops
   * `while` loop: Repetition until the Boolean expression evaluates to `false`
-  * `for` loop: Initialization statement, then repetition until the Boolean expression evaluates to `false`, with the increment statement after each iteration 
+  * `for` loop: Initialization statement, then repetition until the Boolean expression evaluates to `false`, with the increment statement after each iteration
 
 * Rewrite `for` loops as `while` loops and vice versa
 

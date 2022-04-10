@@ -1,8 +1,8 @@
 # About the AP CSA Exam
 
-All relevant information about the AP Computer Science A exam can be found on the [College Board's website](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam).
+All relevant information about the AP Computer Science A exam can be found on the [College Board's website](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam) and in a few other places.
 
-## TL;DR
+## The Summary
 
 ### Exam Length / Composition
 
