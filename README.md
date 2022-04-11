@@ -1,3 +1,9 @@
+---
+layout: page
+title: "AP CSA Review Guide"
+permalink: /
+---
+
 # AP CSA Review Guide
 
 Welcome! This is intended to be a semi-comprehensive review guide for the 2022 Advanced Placement Computer Science A (AP CSA) exam.
