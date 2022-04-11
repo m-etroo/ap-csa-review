@@ -26,4 +26,4 @@ jobs:
       - name: markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v5
         with:
-          globs: "**/*.md"
+          globs: "**.md"
