@@ -69,6 +69,10 @@ This section documents some concepts or methods that can be easily misunderstood
 
 ## Unit 7: `ArrayList`
 
+* Remember that a `ConcurrentModificationException` is thrown when you try to modify an `ArrayList` while it is being traversed with an enhanced `for` loop.
+
+* Note that an `IndexOutOfBoundsException`, not an `ArrayIndexOutOfBoundsException`, is thrown when you try to access an out-of-bounds index in an `ArrayList`.
+
 ## Unit 8: 2D Array
 
 ## Unit 9: Inheritance
