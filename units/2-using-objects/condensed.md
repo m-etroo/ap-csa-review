@@ -134,5 +134,6 @@ void setName(String name)
   ```
 
 ### Miscellaneous
+
 * *Abstraction*, or *procedural abstraction*, refers to the concept that programmers can use a method just by knowing what it does, even if they don't know *how* it is done.
   * If you press the stop button on a microwave, you know that the microwave stops cooking the food inside of it, but you probably don't know *how* exactly the "stop" signal is sent and how it is processed by the microwave. This same idea can be applied to programming.

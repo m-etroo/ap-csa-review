@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "AP CSA Review Guide"
 permalink: /
 ---
 
