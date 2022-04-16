@@ -39,13 +39,58 @@ This section documents some concepts or methods that can be easily misunderstood
 
 * Constructors have no return type, so their signature just consists of the name of the class and the parameter list. However, methods **do** have a return type, so in addition to the method name and parameter list, the signature also includes the return type.
 
+* Object references can be `null`! Make sure to use short circuiting or take other appropriate steps to prevent a `NullPointerException` in cases where you call a method or access an instance variable of a reference that could be `null`.
+
+* Make sure to familiarize yourself with the `Math` class methods on the Java Quick Reference to ensure you aren't tripped up. All of these methods, except for `static int abs(int x)`, return doubles, even if you pass integers as parameters (which are implicitly casted to doubles). Also, note that all `Math` methods are static.
+
 ## Unit 3: Boolean Expressions and `if` Statements
+
+* Make sure to be able to distinguish between a series of `if` statements and the use of `else if` statements. For example:
+
+  ```java
+  int x = 5;
+
+  if (x <= 5) {
+    System.out.println("<= 5"); // this executes
+  } else if (x <= 6) {
+    System.out.println("<= 6"); // this does NOT execute
+  } else {
+    System.out.println("> 6");  // this does not execute
+  }
+  ```
+
+  ```java
+  int x = 5;
+
+  if (x <= 5) {
+    System.out.println("<= 5"); // this executes
+  }
+  if (x <= 6) {
+    System.out.println("<= 6"); // this ALSO executes
+  }
+  ```
+
+* The operator precedence for the logical operators: `!`, then `&&`, then `||`. You can artificially "alter" this precedence by using parentheses.
+
+* Short-circuited evaluation allows the evaluation of a compound Boolean expression to terminate early if one sub-expression determines the result of the entire expression.
+
+* Make sure to brush up on De Morgan's logic laws and truth tables! They may come in handy when you need to evaluate complex expressions.
+
+* *Aliases* are object references that point to the exact same object. This indicates *equality*, which can be tested with the relational equality operators, and is distinct from *equivalency*, which can be tested with the `equals` method.
 
 ## Unit 4: Iteration
 
-* `while` and `for` loops do **not** have to execute at all! If the Boolean expression evaluates to `false` the first time it is evaluated, the loop will not execute at all.
+* `while` and `for` loops do **not** have to execute at all! If the Boolean expression evaluates to `false` the first time it is evaluated, the loop will not execute at all. Similarly, loops can execute infinitely if the Boolean expression is always `true`.
+
+* When you declare a variable with a `for` loop, you can use the variable in the loop body, but not outside of it. This is known as *block scope*. Once the loop is finished, the variable is sent to the garbage collector.
+
+* The increment statement in the header of a `for` loop does not necessarily have to use the `++` operator. It could be `--`, `+=`, or another similar operator.
+
+* Using return statements inside loops can be odd because they immediately terminate the execution of the loop (and the enclosing function, for that matter).
 
 ## Unit 5: Writing Classes
+
+* Don't forget about the "has-a" relationship between an object and its methods/instance variables.
 
 * The `private` keyword only restricts access to the **class**, not the specific **object**. This means that an object can still access the private methods and instance variables of another object **of the same class** without any issue.
 
@@ -61,13 +106,58 @@ This section documents some concepts or methods that can be easily misunderstood
   }
   ```
 
+* For the purposes of AP Computer Science A, all instance variables should **always** be designated as `private` to enforce data encapsulation.
+
 * A default no-argument constructor is **only** provided when no constructors are written. **If you write a constructor with parameters, Java will not automatically provide a no-argument constructor.**
 
-* When a method returns an object reference, the **reference** is copied, **not** the object. This means that
+* Unless explicitly directed to, remember not to destroy persistent data! More on this on the [exam preparation](exam_preparation.md#free-response-questions) page.
+
+* Be aware of the different types of Java comments – single-line, block, and Javadoc.
+
+* Preconditions don't need to be checked. It is assumed that they are satisfied. Postconditions must be met, in all cases, after the method executes.
+
+* Just as with `null` values stored in variables of a reference type, methods with a return type that is a reference type may return a `null` value.
+
+* Remember that methods are "pass by value" and "return by value", meaning that a copy of the primitive value or object reference (but not the object itself) is made.
+
+* Static methods must be called with the class name and the dot operator, not an object reference and the dot operator.
+
+* The `this` keyword itself refers to a method's associated object. So, the object can be passed as a parameter to a method call (for example: `System.out.println(this)`), or the `this` keyword can be used to access the object's instance variables (for example: `this.age`).
+
+* When an object is passed to a print method, the `toString` method is implicitly called, as in the example in the previous list item.
+
+* Static methods, by their nature, do not have a `this` reference, since they aren't associated with any object.
+
+* *Method decomposition* refers to the breaking down of a solution to a problem into multiple methods that each perform a specific task to solve part of the larger problem.
 
 ## Unit 6: Array
 
+* Arrays, unlike `ArrayList`s, can store primitive **or** reference data. They are also of a fixed size, meaning it cannot be changed after instantiation.
+
+* The size of the array is declared when it is instantiated with the `new` keyword, not when its variable is declared. For example:
+
+  ```java
+  int[] myArray = new int[10];  // declaration declares the type
+                                // instantiation sets the size
+  ```
+
+* **Arrays are zero-indexed**. Their indices start from `0`, not `1`. Therefore, the last index is at `length - 1`. Do not forget this!
+
+* Make sure to be familiar with the default values for array elements, which is what all elements are set to upon instantiation unless an initializer list (with `{}`) is used.
+  * `int`: 0
+  * `double`: 0.0
+  * `boolean`: `false` &nbsp;&nbsp;&nbsp;(This one may be particularly easy to forget).
+  * Any reference type: `null`
+
+* There is a separate out-of-bounds exception for arrays: `ArrayIndexOutOfBoundsException`.
+
+* You can't modify the array element with an enhanced `for` loop, i.e. change its primitive value or object reference. The enhanced for loop variable is only available in the body of the loop, and changing it does not change the value stored in the array. Be careful not to destroy any object data though, since the object reference is copied to the enhanced for loop variable, not the object itself.
+
 ## Unit 7: `ArrayList`
+
+* `ArrayList`s, unlike arrays, can **only** store reference data. Wrapper classes can be used as a way to store primitives. `ArrayList`s also automatically resize as elements are added and removed.
+
+* There is no equivalent to the array initializer list (that is within the scope of AP CSA) for `ArrayList`s. Any default state must be set with the `add` method.
 
 * Remember that a `ConcurrentModificationException` is thrown when you try to modify an `ArrayList` while it is being traversed with an enhanced `for` loop.
 
