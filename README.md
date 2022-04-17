@@ -13,6 +13,10 @@ Portions of this repository may still be under construction. If you see an obvio
 
 ---
 
-Head over to the [table of contents](table_of_contents.md) to navigate this guide.
+## Start here
 
-A good place to start would be the [exam preparation](general/exam_preparation.md) page to see where you might want to take a look in this guide.
+A good place to start would be the [exam preparation](general/exam_preparation.md) page. This page has several links to other pages that include information about the AP Exam, preparation resources, etc.
+
+The [topic list](general/topic_list.md) is a list of all topics that may be assessed on the AP Exam.
+
+Head over to the [table of contents](table_of_contents.md) to navigate this guide.
