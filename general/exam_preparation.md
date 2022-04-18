@@ -30,9 +30,9 @@ Here are some things you may want to consider doing to prepare for the AP Exam:
 
 General suggestions for anyone, regardless of level of comfort with the course content:
 
-* Read through:
-  * This page – to see what you might want to look over
-  * The ["about the exam"](about_the_exam.md) page – to know what to expect
+* Read through this page – to see what you might want to look over
+
+* Read through the ["about the exam"](about_the_exam.md) page – to know what to expect
 
 * Read through the [topic list](topic_list.md). This is a full list of pretty much every topic assessed on the AP Exam. By running through this list, you can see what individual topics you may need to review.
 
