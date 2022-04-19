@@ -9,7 +9,7 @@ Welcome! This is intended to be a semi-comprehensive review guide for the 2022 A
 
 The contents of this repository are based on the AP Computer Science A [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a) and some other documents, which are listed on the [resources page](resources.md).
 
-Portions of this repository may still be under construction. If you see an obvious gap of information somewhere, that's probably the case. Feel free to [contribute, though!](CONTRIBUTING.md)
+Portions of this repository may still be under construction. If you see an obvious gap of information somewhere, that's probably the case. Feel free to [contribute, though!](https://github.com/m-etroo/ap-csa-review/blob/main/CONTRIBUTING.md)
 
 ---
 
