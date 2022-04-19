@@ -11,6 +11,7 @@ All relevant information about the AP Computer Science A exam can be found on th
   - Section I: Multiple-Choice Questions
     - 40 questions, 1.5 hours
     - 50% of total exam score
+    - Weighting is based on the percentages in the Course and Exam Description, page 19.
   - Section II: Free-Response Questions
     - 4 questions, 1.5 hours
     - 50% of total exam score, with each question worth 12.5%
