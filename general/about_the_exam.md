@@ -14,11 +14,15 @@ All relevant information about the AP Computer Science A exam can be found on th
   - Section II: Free-Response Questions
     - 4 questions, 1.5 hours
     - 50% of total exam score, with each question worth 12.5%
-    - Follows a set order:
+    - Follows a set order – usually you only write a few methods per question, except Q2:
       1. Q1: Methods and Control Structures
-      2. Q2: Class (writing a class)
+      2. Q2: Class (writing an entire class)
       3. Q3: Array/`ArrayList`
       4. Q4: 2D Array
+
+For Section I, you will be recording answers on an SAT-style bubble sheet.
+
+For Section II, you will actually be writing code by hand in a free-response booklet. You should have plenty of space to write everything you need, but you can also request extra paper if, for whatever reason – crossed-out errors or otherwise – you run out of space.
 
 ### Exam Content
 
