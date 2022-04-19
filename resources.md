@@ -20,3 +20,7 @@ In no particular order, some of them are listed here:
   * Note that several of these questions from AP Exams prior to 2019 refer to *interfaces*, which is a topic that is no longer assessed on the AP Exam.
   * The same supplemental materials as in the 2021 FRQs are available here too.
   * A table of all of these questions and the free-response categories they fit into is available [here](https://drive.google.com/file/d/1BLqUERJzT3ghbRkqqHr0a6V4j4kXuvKc/view?usp=sharing) (this table was provided in the 2021 AP Live Review Sessions).
+
+* [AP Computer Science A Exam Tips](https://apstudents.collegeboard.org/courses/ap-computer-science-a/exam-tips): This provides a few general pointers for the exam.
+
+* [Writing Code on the AP Computer Science Exams: Important Advice for Students](https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/writing-code-ap-computer-science-exams-important-advice-students?course=ap-computer-science-a): A partially outdated, yet still very relevant, resource with some comments on writing FRQ responses.
