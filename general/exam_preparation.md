@@ -46,3 +46,18 @@ The usual – start studying early, go to bed early, and eat breakfast.
 * Don't use methods, constructs, or other material that is not covered in the CED or listed on the Java Quick Reference. It may hurt your score if you are not fully familiar with what you are doing.
 
 * Leave space in between lines of code in your solution in case you need to add something later.
+
+* **Do not** destroy persistent data! Remember that all method parameters of reference types are passed by reference, so if you change the object referenced by a reference parameter, the original object from the calling method will also be changed. For example:
+
+  ```java
+  public static void change(int[] a) {
+    a[0] = (int) (Math.random() * 100);
+    System.out.println(a[0]);
+  }
+  ```
+
+  Changing the value of the array element at index `0` will also change the value of that element in the array stored by the calling method. This is because they are the same array!
+
+  Destroying persistent data on an FRQ response unless explicitly directed to results in a penalty, per the Scoring Guidelines.
+
+* If you're told that something is a precondition, don't check it in your code! By its nature, the existence of a precondition means that you can assume that it will be satisfied before the method is called. If you accidentally write an improper check, you will receive a score penalty, per the Scoring Guidelines.
