@@ -1,6 +1,10 @@
+---
+permalink: /units/2-using-objects
+---
+
 # Unit 2: Using Objects
 
-View the [in-depth version](in-depth.md)
+<!-- View the [in-depth version](in-depth.md) -->
 
 ## Unit Overview
 

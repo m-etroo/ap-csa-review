@@ -16,12 +16,10 @@
 
 ## Unit-Specific Info
 
-* **Unit 1:** Primitive Types
-  * [In-depth guide](units/1-primitive-types/in-depth.md)
-  * [Condensed info](units/1-primitive-types/condensed.md)
+Pages with more specific info for some units were completed, but the most important information in this guide is in the _General Info_ section above. Refer to classroom presentations and other resources to review concepts that you may have forgotten.
 
-* **Unit 2:** Using Objects
-  * [In-depth guide](units/2-using-objects/in-depth.md)
-  * [Condensed info](units/2-using-objects/condensed.md)
+* **Unit 1:** [Primitive Types](units/1-primitive-types/in-depth.md)
 
-Other units may be completed in the future, although just use your classroom resources and/or Google for specific topics that you want to review. The more important parts of this guide are in the _General Info_ section above.
+* **Unit 2:** [Using Objects](units/2-using-objects/condensed.md)
+
+* **Unit 7:** [`ArrayList`](units/7-arraylist/condensed.md)

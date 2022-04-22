@@ -1,6 +1,10 @@
+---
+permalink: /units/1-primitive-types
+---
+
 # Unit 1: Primitive Types
 
-View the [condensed version](condensed)
+<!-- View the [condensed version](condensed) -->
 
 ## Unit Overview
 
@@ -170,9 +174,9 @@ x--; // is equivalent to
 x -= 1;
 ```
 
----
+<!-- ---
 View the [condensed version](condensed)
 
 Advance to [Unit 2](../2-using-objects/in-depth.md)
 
-To the [table of contents](../../table_of_contents.md)
+To the [table of contents](../../table_of_contents.md) -->

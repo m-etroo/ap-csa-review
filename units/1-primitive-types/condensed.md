@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 # Unit 1: Primitive Types
 
 Primitives can be differentiated from objects because primitives always begin with a lowercase letter.

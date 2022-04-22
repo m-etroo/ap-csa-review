@@ -1,3 +1,7 @@
+---
+permalink: /units/7-arraylist
+---
+
 # Unit 7: `ArrayList`
 
 <!-- View the [in-depth version](in-depth.md) -->
