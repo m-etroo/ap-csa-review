@@ -1,5 +1,9 @@
 # Review Guide Table of Contents
 
+* [Resources](resources.md): A few links to other places that may help with preparation.
+
+* [Definitions](definitions.md): A few possibly confusing terms that are used throughout the guide.
+
 ## General Info
 
 * [Exam preparation and taking the exam](general/exam_preparation.md): Some suggestions for preparing for the exam. _**This is a good place to start if you aren't sure which pages to look at.**_
