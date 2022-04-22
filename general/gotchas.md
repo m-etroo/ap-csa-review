@@ -165,6 +165,80 @@ This section documents some concepts or methods that can be easily misunderstood
 
 ## Unit 8: 2D Array
 
+* For AP CSA, all 2D arrays will utilize *row-major order*. This means that the first access index refers to the row and the second access index refers to the column.
+
+  ```java
+  // 7 will be set at the 6th row and 2nd column
+  myArray[5][1] = 7;
+  ```
+
+* Functionally, a 2D array is stored as an array of arrays of a specific type. Therefore, special attention must be given when traversing a 2D array with an enhanced `for` loop.
+  * The type of the **outer** enhanced `for` loop must be an **array** of the type that is stored in the 2D array. For example:
+
+    ```java
+    int[][] myArray = new int[10][10];
+
+    for (int[] row : myArray) {
+        for (int col : row) {
+          // prints each value in the 2D array
+          System.out.println(col);
+        }
+    }
+    ```
+
 ## Unit 9: Inheritance
 
+* There is an "is-a" relationship between the subclass and the superclass. The thing represented by the subclass "should be" a thing represented by the superclass, e.g. cheddar "is a" cheese, where `Cheddar` is the subclass and `Cheese` is the superclass.
+
+* While any given class can only **directly** extend one class, a longer inheritance hierarchy can be built, i.e. the superclass can be the subclass to another superclass, and so on.
+  * Proof? All classes in Java that do not extend another class automatically extend the `Object` class. So, the inheritance hierarchy for the cheeses looks like:
+
+  ```text
+  (highest)     Object > Cheese > Cheddar     (lowest)
+  ```
+
+* Constructors are **not** inherited by the subclass, but `public` methods and instance variables **are**. (Note that, in the context of AP CSA [where all instance variables should be `private`], the subclass can't actually access the superclass's instance variables. The same is true of the superclass's `private` methods.)
+
+* If the superclass constructor is not explicitly called on the first line of the subclass constructor (with `super`), the no-argument superclass constructor is implicitly called in this place.
+
+* Because of the way in which constructor calls are resolved, the body (excluding the implicit or explicit superclass call)[^1] of the highest constructor in the hierarchy is executed first. Then, the body of the next highest constructor is executed, and so on. So, for example, the `Object` constructor would be executed first, then the `Cheese` constructor, then the `Cheddar` constructor.
+
+* Make sure to know the difference between overloading and overriding. You don't have to override any methods in the subclass, but you can. Similarly, you don't have to add any new methods in the subclass, but you can.
+
+* References of a superclass type can contain pointers to objects that are actually of that type **or** a subclass of it.
+  * For example, a variable declared as the `Cheese` type can hold a `Cheese` object or a `Cheddar` object.
+  * In a case like this, **only** methods of `Cheese` can be called on the object. Methods that are defined exclusively in `Cheddar` cannot be used. However, if the variable (of type `Cheese`) stores a `Cheddar` and the `Cheddar` class overrides a method of `Cheese`, the method defined in the `Cheddar` class (not the `Cheese` method) will be executed.
+
+    ```java
+    public class Cheese {
+        // constructor not shown
+        public void printMessage() {
+            System.out.println("Cheese is tasty!");
+        }
+    }
+
+    public class Cheddar extends Cheese {
+        // constructor and instance vars not shown
+        public void printMessage() {
+            System.out.println("Cheddar is better!");
+        }
+
+        public void getColor() {
+            System.out.println(color);
+        }
+    }
+    ```
+
+    ```java
+    Cheese c = new Cheddar();
+    c.printMessage();  // prints "Cheddar is better!"
+    c.getColor();      // error
+    ```
+
 ## Unit 10: Recursion
+
+* Make sure to be familiar with how to use base cases and recursive calls properly.
+
+* Remember that each and every call to the recursive method, including the initial call and all subsequent recursive calls, has its own local variables that are specific to that call and are not shared by any other call.
+
+[^1]: "Executed" here refers to the execution of everything after the superclass constructor call. Of course, the lowest constructor in the hierarchy is *actually* called first, but nothing happens beyond the superclass call until **all** of the higher constructors finish executing. So, a more accurate thing to say is that the highest constructor in the hierarchy *finishes* executing first.
